@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { GeminiService } from '../../services/gemini.service';
 import { DomSanitizer, SafeHtml, SafeUrl } from '@angular/platform-browser';
 import { firstValueFrom } from 'rxjs';
@@ -9,7 +10,8 @@ import { markedHighlight } from "marked-highlight";
 @Component({
   selector: 'app-receipt-analyzer',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HttpClientModule],
+  providers: [GeminiService],
   template: `
     <div class="min-h-screen bg-gradient-to-b from-[#fffdf9] to-[#f8f5f0] py-12 px-4">
       <div class="max-w-5xl mx-auto">
