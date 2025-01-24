@@ -11,7 +11,7 @@ interface AnalyzeResponse {
   providedIn: 'root'
 })
 export class GeminiService {
-  private apiUrl = 'http://localhost:3000/receipt';
+  private apiUrl = 'https://api-keidsonroby-ai.onrender.com/receipt';
 
   constructor(private http: HttpClient) {}
 
